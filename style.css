@@ -430,7 +430,7 @@ span::before {
     background-image: repeating-radial-gradient(#181312, #181312 10%, #2c2424 15%);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.52),
                 0 4px 8px 0 rgba(0, 0, 0, 0.41);
-    animation: rotateDisc 10s  infinite linear, moveUpDisc 1.5s linear forwards;
+    /* animation: rotateDisc 10s  infinite linear, moveUpDisc 1.5s linear forwards; */
     overflow: hidden;
 }
 
