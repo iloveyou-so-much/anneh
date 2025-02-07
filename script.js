@@ -36,15 +36,18 @@ let photoOne = document.querySelector('.one');
 let photoTwo = document.querySelector('.two');
 let photoThree = document.querySelector('.three');
 let photoFour = document.querySelector('.four');
+let vinyl = document.querySelector('.vinyl');
 let song = document.querySelector('audio');
 let promptM = document.querySelector('#prompt');
+// const audio = document.getElementById("background-music");
 
-document.querySelector(".yes-btn").addEventListener("click", function() {
-  landingPage.style.display = "none";
+document.querySelector(".yes-btn").addEventListener("click", function () {
+    landingPage.style.display = "none";
 
-  if (song.paused) {
-    song.play(); // Play the song
-  }
+    if (song.paused) {
+      song.play();
+    }
+
 
   firstLine.style.animation = "moveDown 1s linear forwards";
   secondLine.style.animation = "scaleDown 1s linear forwards";
@@ -53,7 +56,7 @@ document.querySelector(".yes-btn").addEventListener("click", function() {
   photoThree.style.animation = "movePhoto3 1s linear forwards";
   photoFour.style.animation = "movePhoto4 1.5s linear forwards";
   promptM.style.animation = "pulse 1.5s infinite alternate 3s, fade 4s linear forwards";
-
+  vinyl.style.animation = "rotateDisc 10s  infinite linear, moveUpDisc 1.5s linear forwards";
 });
 
 
@@ -174,4 +177,12 @@ exitBtn.addEventListener('click', () => {
       envelopeContainer.style.display = 'none';
       overLay.style.display = 'none';
   }, 700);
+});
+
+// Adjust Music Start
+const audio = document.getElementById("background-music");
+
+audio.addEventListener("canplay", () => {
+    audio.currentTime = 20; // Start from 10 seconds
+    audio.play();
 });
