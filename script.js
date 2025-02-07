@@ -179,10 +179,3 @@ exitBtn.addEventListener('click', () => {
   }, 700);
 });
 
-// Adjust Music Start
-const audio = document.getElementById("background-music");
-
-audio.addEventListener("canplay", () => {
-    audio.currentTime = 20; // Start from 10 seconds
-    audio.play();
-});
